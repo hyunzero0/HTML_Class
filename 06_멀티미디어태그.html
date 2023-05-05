@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어태그</title>
+</head>
+<body>
+    <h2>이미지태그 이용하기</h2>
+    <p>
+        내부에 있는 사진, 외부에 있는 사진을 페이지에 출력하는 태그<br>
+        단일태그로 속성을 설정한다. <br>
+        src : 파일이 있는 위치를 설정(local 경로, web상 경로) <br>
+        width : 출력될 이미지의 너비를 설정(가로) <br>
+        height : 출력될 이미지의 높이를 설정(세로) <br>
+        alt : src속성에 설정된 이미지가 없으면 출력될 문구 <br>
+    </p>
+    <div id="imgcontainer">
+        <img src="./images/메이플.png">
+        <img src="./images/메이플.png" alt="빵델이" width="400" height="400">
+        <img src="./images/메이플1.png" alt="빵델이" width="400" height="400">
+        <!-- 인라인형식이라서 옆으로 들어감 -->
+
+        <h3>웹상에서 이미지 불러오기</h3>
+        <img src="https://www.sisajournal.com/news/photo/202210/247637_160771_209.jpg"
+        alt="블랙핑크" width="300" height="230">
+
+        <h3>이미지맵 이용하기</h3>
+        <div id="imgMap">
+            <img src="https://www.sisajournal.com/news/photo/202210/247637_160771_209.jpg"
+            alt="" width="500" height="500" usemap="#target">
+            <map name="target">
+                <area shape="rect" coords="0,0,125,500" href="http://search.naver.com/search.naver?query=지수" alt="">
+                <area shape="rect" coords="125,0,250,500" href="http://search.naver.com/search.naver?query=로제" alt="">
+                <area shape="rect" coords="250,0,375,500" href="http://search.naver.com/search.naver?query=리사" alt="">
+                <area shape="rect" coords="375,0,500,500" href="http://search.naver.com/search.naver?query=제니" alt="">
+            </map>
+        </div>
+    </div>
+
+    <h2>오디오 이용하기</h2>
+    <!-- 컨트롤러가 있어야 가능 -->
+    <!-- UI는 크롬에서 만들어줌(브라우저마다 조금 다름) -->
+    <audio src="./audio/Kalimba.ogg" controls></audio>
+    <!-- <audio src="./audio/Kalimba.ogg" controls autoplay></audio> 보안때문에 autoplay 막아둠 -->
+    <audio src="./audio/major.mp3" controls loop></audio>
+
+    <h2>비디오 이용하기</h2>
+    <video src="./video/video1.mp4" controls width="300" height="200"></video>
+    <video src="https://i.namu.wiki/i/ZHr0nbDYupfeV6CBQO3LeMxEGJ4qiL_EqRqUQOkOmqAa_5sHjZZT5WyilHAUDylJ8FQZROEGOe_BDTDDq3EuKg.mp4" controls loop></video>
+    <video src="./video/movie.ogv" controls width="300" height="200"></video>
+    <video src="./video/Wildlife.webm" poster="./images/메이플.png" controls width="300" height="200"></video>
+</body>
+</html>
